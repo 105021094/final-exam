@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="resource/css/demos.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>hungry</title>
+
+    <style type="text/css">
+    <!-- A{text-decoration:none} --> 
+     body{
+     color: #FFF;
+     margin:0 auto;
+     font-family: sans-serif, "微軟正黑體";
+     }
+     
+    #header{
+     background-color: #F57C00;
+     padding: 5px;
+     }
+        
+    #section{
+     background-color: #FFE0B2;
+     height: 540px;
+     line-height: 1.5em;
+     font-size: 24px;
+     padding: 20px ;
+     color: #555353;
+    
+     }
+    
+    #map{
+     margin-top: 25px;  
+    }
+
+     #footer{
+     padding:20px;
+     background-color: #F57C00;
+     clear: both;
+     }
+  
+     h1{
+     font-family: sans-serif, "微軟正黑體";
+     font-size: 70px;
+     color: #FFF;
+     text-align: center;
+     }
+
+     </style>
+    
+  </head>
+  <body>
+  <header id="header">
+    <h1>餐廳</h1>
+  </header>
+      
+    <div id="section">
+    <div id="map" style="width: 280px; height: 250px"></div>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: 24.147015, lng: 120.615357};
+
+        // Create a map objec t and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 16
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfjgketWMCgxrO0mM_lKKWhYmoX3EIBEg&callback=initMap"
+        async defer></script>  
+  
+       <ul>    
+             <li><b>店家:第一猛東石烤鮮蚵</b>
+             <li><b>電話:09-85156256</b>
+             <li><b>營業時間:下午17:00 - 下午22:30</b>  
+             <li><b>資訊: X接受訂位 X提供外送 V適合兒童</b> 
+      </ul>
+ 
+    </div>
+  <footer id="footer">
+       <a href="javascript:history.back()"><img src="img/2.png"></a>
+      <a href="javascript:location.href='index.html'"><img src="img/3.png"></a>
+      <a href="javascript:history.forward()"><img src="img/a.png"></a>
+  </footer>
+   </body>
+</html>
